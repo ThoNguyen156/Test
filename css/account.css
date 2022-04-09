@@ -1,0 +1,113 @@
+.account {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.account.open{
+    display: flex;
+}
+
+.account__header{
+    background-image: linear-gradient(0, rgb(240, 31, 31),rgb(242, 91, 91));
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: #000;
+}
+
+.account__container{
+    background: #fff;
+    width: 900px;
+    max-width: calc(100% - 32px);
+    min-height: 200px;
+    position: relative;
+    animation: modalFadeIn ease 0.4s;
+
+}
+
+.account__close{
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #fff;
+    cursor: pointer;
+    padding: 12px;
+    opacity: 0.8;
+}
+
+.account__close:hover{
+    opacity: 1;
+    color: #000;
+    background-color: #ccc;
+}
+
+.account__body{
+    padding: 16px;
+}
+
+.account-label{
+    display: block;
+    font-size: 15px;
+    margin-bottom: 12px;
+
+}
+
+.account-input {
+    border: 1px solid #ccc;
+    width: 97%;
+    padding: 12px;
+    font-size: 15px;
+    margin-bottom: 24px;
+}
+
+#account-buy-tickets{
+    background-image: linear-gradient(0, rgb(240, 31, 31),rgb(242, 91, 91));
+    border: none;
+    color: #000;
+    width: 100%;
+    font-size: 15px;
+    text-transform: uppercase;
+    padding: 18px;
+    cursor: pointer;
+}
+
+#account-buy-tickets:hover{
+    opacity: 0.9;
+}
+
+.account__footer{
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.account__footer a{
+    color: #000;
+    text-decoration: none;
+}
+
+.account__footer a:hover{
+    opacity: 0.5;
+}
+
+@keyframes modalFadeIn {
+    from{
+        opacity: 0;
+        transform: translateY(-140px);
+    }
+    to{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
